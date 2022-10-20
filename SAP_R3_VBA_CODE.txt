@@ -1,0 +1,185 @@
+
+Sub SAP_REPPORT_1()
+
+Application.EnableEvents = False
+Application.DisplayAlerts = False
+    If Not IsObject(app) Then
+        Set SapGuiAuto = GetObject("SAPGUI")
+        Set app = SapGuiAuto.GetScriptingEngine
+    End If
+    
+      If Not IsObject(Connection) Then
+         Set Connection = app.Children(0)
+      End If
+      
+      If Not IsObject(session) Then
+         Set session = Connection.Children(0)
+      End If
+      
+      If IsObject(WScript) Then
+         WScript.ConnectObject session, "on"
+         WScript.ConnectObject app, "on"
+      End If
+
+      session.findById("wnd[0]").resizeWorkingPane 129, 34, False
+      session.findById("wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell").doubleClickNode "F00007"
+      session.findById("wnd[0]/tbar[1]/btn[17]").press
+      session.findById("wnd[1]/usr/txtENAME-LOW").Text = ""
+      session.findById("wnd[1]/usr/txtENAME-LOW").SetFocus
+      session.findById("wnd[1]/usr/txtENAME-LOW").caretPosition = 0
+      session.findById("wnd[1]/tbar[0]/btn[8]").press
+      session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").currentCellRow = 4
+      session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").selectedRows = "4"
+      session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").doubleClickCurrentCell
+      session.findById("wnd[0]/tbar[1]/btn[8]").press
+      session.findById("wnd[0]/usr/lbl[46,19]").SetFocus
+      session.findById("wnd[0]/usr/lbl[46,19]").caretPosition = 0
+      session.findById("wnd[0]").sendVKey 45
+      session.findById("wnd[1]/tbar[0]/btn[0]").press
+      session.findById("wnd[1]/usr/ctxtDY_FILENAME").caretPosition = 2
+      session.findById("wnd[1]/usr/ctxtDY_PATH").Text = " OUTPUT_PATH "
+      session.findById("wnd[1]/usr/ctxtDY_FILENAME").Text = "SAP_REPPORT_1.txt"
+      session.findById("wnd[1]/tbar[0]/btn[11]").press
+      session.findById("wnd[0]/tbar[0]/btn[3]").press
+      session.findById("wnd[0]/tbar[0]/btn[3]").press
+End Sub
+
+ 
+
+Sub SAP_REPPORT_2()
+
+Application.EnableEvents = False
+Application.DisplayAlerts = False
+
+If Not IsObject(app) Then
+      Set SapGuiAuto = GetObject("SAPGUI")
+      Set app = SapGuiAuto.GetScriptingEngine
+   End If
+   If Not IsObject(Connection) Then
+      Set Connection = app.Children(0)
+  End If
+   If Not IsObject(session) Then
+      Set session = Connection.Children(0)
+   End If
+   If IsObject(WScript) Then
+      WScript.ConnectObject session, "on"
+      WScript.ConnectObject app, "on"
+   End If
+
+   session.findById("wnd[0]").resizeWorkingPane 129, 34, False
+   session.findById("wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell").doubleClickNode "F00007"
+   session.findById("wnd[0]/tbar[1]/btn[17]").press
+   session.findById("wnd[1]/usr/txtENAME-LOW").Text = ""
+   session.findById("wnd[1]/usr/txtENAME-LOW").SetFocus
+   session.findById("wnd[1]/usr/txtENAME-LOW").caretPosition = 0
+   session.findById("wnd[1]/tbar[0]/btn[8]").press
+   session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").currentCellRow = 2
+   session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").selectedRows = "2"
+   session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").doubleClickCurrentCell
+   session.findById("wnd[0]/tbar[1]/btn[8]").press
+   session.findById("wnd[0]/usr/lbl[46,17]").SetFocus
+   session.findById("wnd[0]/usr/lbl[46,17]").caretPosition = 0
+   session.findById("wnd[0]").sendVKey 45
+   session.findById("wnd[1]/tbar[0]/btn[0]").press
+   session.findById("wnd[1]/usr/ctxtDY_PATH").Text = " OUTPUT_PATH "
+   session.findById("wnd[1]/usr/ctxtDY_FILENAME").Text = " SAP_REPPORT_2.txt"
+   session.findById("wnd[1]/tbar[0]/btn[11]").press
+   session.findById("wnd[0]/tbar[0]/btn[3]").press
+   session.findById("wnd[0]/tbar[0]/btn[3]").press
+
+End Sub
+
+ 
+
+Sub SAP_REPPORT_3()
+
+Application.EnableEvents = False
+Application.DisplayAlerts = False
+
+If Not IsObject(app) Then
+   Set SapGuiAuto = GetObject("SAPGUI")
+   Set app = SapGuiAuto.GetScriptingEngine
+End If
+If Not IsObject(Connection) Then
+   Set Connection = app.Children(0)
+End If
+If Not IsObject(session) Then
+   Set session = Connection.Children(0)
+End If
+If IsObject(WScript) Then
+   WScript.ConnectObject session, "on"
+   WScript.ConnectObject app, "on"
+End If
+
+session.findById("wnd[0]").resizeWorkingPane 129, 34, False
+session.findById("wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell").selectedNode = "F00007"
+session.findById("wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell").doubleClickNode "F00007"
+session.findById("wnd[0]/tbar[1]/btn[17]").press
+session.findById("wnd[1]/usr/txtENAME-LOW").Text = ""
+session.findById("wnd[1]/usr/txtENAME-LOW").SetFocus
+session.findById("wnd[1]/usr/txtENAME-LOW").caretPosition = 0
+session.findById("wnd[1]/tbar[0]/btn[8]").press
+session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").currentCellRow = 3
+session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").selectedRows = "3"
+session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").doubleClickCurrentCell
+session.findById("wnd[0]/tbar[1]/btn[8]").press
+session.findById("wnd[0]/usr/lbl[46,25]").SetFocus
+session.findById("wnd[0]/usr/lbl[46,25]").caretPosition = 0
+session.findById("wnd[0]").sendVKey 45
+session.findById("wnd[1]/tbar[0]/btn[0]").press
+session.findById("wnd[1]/usr/ctxtDY_PATH").SetFocus
+session.findById("wnd[1]/usr/ctxtDY_PATH").caretPosition = 0
+session.findById("wnd[1]/usr/ctxtDY_PATH").Text = " OUTPUT_PATH "
+session.findById("wnd[1]/usr/ctxtDY_FILENAME").Text = "SAP_REPPORT_3.txt"
+session.findById("wnd[1]/tbar[0]/btn[11]").press
+session.findById("wnd[0]/tbar[0]/btn[3]").press
+session.findById("wnd[0]/tbar[0]/btn[3]").press
+
+End Sub
+
+ 
+ 
+Sub SAP_REPPORT_4()
+
+Application.EnableEvents = False
+Application.DisplayAlerts = False
+
+  If Not IsObject(app) Then
+      Set SapGuiAuto = GetObject("SAPGUI")
+      Set app = SapGuiAuto.GetScriptingEngine
+   End If
+
+   If Not IsObject(Connection) Then
+      Set Connection = app.Children(0)
+   End If
+
+   If Not IsObject(session) Then
+      Set session = Connection.Children(0)
+   End If
+
+   If IsObject(WScript) Then
+      WScript.ConnectObject session, "on"
+      WScript.ConnectObject app, "on"
+   End If
+
+   session.findById("wnd[0]").resizeWorkingPane 129, 34, False
+   session.findById("wnd[0]/usr/cntlIMAGE_CONTAINER/shellcont/shell/shellcont[0]/shell").doubleClickNode "F00007"
+   session.findById("wnd[0]/tbar[1]/btn[17]").press
+   session.findById("wnd[1]/usr/txtENAME-LOW").Text = ""
+   session.findById("wnd[1]/usr/txtENAME-LOW").SetFocus
+   session.findById("wnd[1]/usr/txtENAME-LOW").caretPosition = 0
+   session.findById("wnd[1]/tbar[0]/btn[8]").press
+   session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").currentCellRow = 5
+   session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").selectedRows = "5"
+   session.findById("wnd[1]/usr/cntlALV_CONTAINER_1/shellcont/shell").doubleClickCurrentCell
+   session.findById("wnd[0]/tbar[1]/btn[8]").press
+   session.findById("wnd[0]/usr/lbl[69,20]").SetFocus
+   session.findById("wnd[0]/usr/lbl[69,20]").caretPosition = 0
+   session.findById("wnd[0]").sendVKey 45
+   session.findById("wnd[1]/tbar[0]/btn[0]").press
+   session.findById("wnd[1]/usr/ctxtDY_PATH").Text = "OUTPUT_PATH"
+   session.findById("wnd[1]/usr/ctxtDY_FILENAME").Text = "SAP_REPPORT_4.txt"
+   session.findById("wnd[1]/tbar[0]/btn[11]").press
+   session.findById("wnd[0]/tbar[0]/btn[3]").press
+   session.findById("wnd[0]/tbar[0]/btn[3]").press
+End Sub
