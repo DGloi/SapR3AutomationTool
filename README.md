@@ -20,7 +20,6 @@ This project leverages microsoft excel, VBA scripting language and python 3.6 wi
 Before running the application, first install the following dependencies:
 ```python
     pip install pywin32
-    pip install questionary
 ```
 
 
@@ -30,12 +29,17 @@ Before running the application, first install the following dependencies:
  
  ## How does that work ?
 
+SAP R3 allows you to record your own reports in VBA by default so you can simply launch the VBA script later to let your machine fetch the data on its own.
+(Recording process below).
+So the idea is to have programs to log us in SAP R3 in the right SAP environment, launch and save the needed reports , clean the data and begin analysis.
+
+Still a bit confused ?
 
 A picture is worth a thousand words:
 
 
 
-
+Basically, the first script Sap_login.py will allow you to connect automatically to your SAP interface. Then vba_macros_launcher.py will be able to launch every macro recorded from SAP and stored into the excel file VBA_Macro_4_sapR3.xlsm
 
 ---
 ## How can I record my own SAP Tcode ? 
@@ -50,7 +54,7 @@ The process to record your own process from sap into a vba code is quite straigh
 
 ![sap-easy-access-system](https://user-images.githubusercontent.com/93589158/197608516-1f55dc28-2550-455c-9d3c-25acdb701fde.png)
 
-*Select More.
+* Select More.
 
 Under Save To, provide the path and file name where you want to store the captured user interactions.
 
