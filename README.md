@@ -1,6 +1,6 @@
 ![r3-1601913976](https://user-images.githubusercontent.com/93589158/197033907-db6a521c-a1f5-4c7e-a7a4-7d1ead778996.png)
 # Sap-R3-Automation-tool
- SAP R3 is still used by numerous companies and many people still use it everyday at their work, sometimes running the same reports all over again everyday.
+ SAP R3 is still used by numerous companies and many people still use it everyday at work, sometimes running the same reports all over again everyday.
  This is where this solution comes to play. 
  
 This repositeries provides a framework to be applied to any situation described above. It cannot be simply forked or copied to make it work on your situation as you will be requiered to do some modifications and record your own process in SAP.
@@ -11,7 +11,7 @@ This repositeries provides a framework to be applied to any situation described 
 This project leverages microsoft excel, VBA scripting language and python 3.6 with the following packages:
 
 * [pywin32](https://pypi.org/project/pywin32/)
-
+* [pandas](https://pandas.pydata.org/)
 
 
 ---
@@ -20,6 +20,7 @@ This project leverages microsoft excel, VBA scripting language and python 3.6 wi
 Before running the application, first install the following dependencies:
 ```python
     pip install pywin32
+    pip install pandas
 ```
 
 
@@ -33,13 +34,15 @@ SAP R3 allows you to record your own reports in VBA by default so you can simply
 (Recording process below).
 So the idea is to have programs to log us in SAP R3 in the right SAP environment, launch and save the needed reports , clean the data and begin analysis.
 
-Still a bit confused ?
+### Still a bit confused ?
 
 A picture is worth a thousand words:
 
+![Sap_automation_timeline](https://user-images.githubusercontent.com/93589158/198616234-3b6c0be3-6106-4882-bbf4-fca3c6da27a7.PNG)
 
-
-Basically, the first script Sap_login.py will allow you to connect automatically to your SAP interface. Then vba_macros_launcher.py will be able to launch every macro recorded from SAP and stored into the excel file VBA_Macro_4_sapR3.xlsm
+Basically, the first script Sap_login.py will allow you to connect automatically to your SAP user interface. Then vba_macros_launcher.py will be able to launch every macro recorded from SAP and stored into the excel file VBA_Macro_4_sapR3.xlsm 
+Now it is important to mention again that those VBA macros will need to be recorded by the user on their own use-case.
+In my case, once those data in .txt are created each day I need to transform this data, clean it and filter the relevant records, you will find this step in 
 
 ---
 ## How can I record my own SAP Tcode ? 
