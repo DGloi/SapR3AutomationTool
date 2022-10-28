@@ -73,6 +73,10 @@ Under Save To, provide the path and file name where you want to store the captur
 ![saving-recording-file](https://user-images.githubusercontent.com/93589158/197609231-56c10887-9360-4953-8e4d-534c4268b031.png)
 
 
+## Looks cool, but why not simply use an API to access data from SAP direclty in python?
+
+Yeah this one hurts. Many people in their company simply do not have access to such tools. And in the case of SAP R3, I am not aware of anything created for python. Now mind you, SAP S4 does have such possibility and if I could have gone for that, that would have been the prefered solution as its faster, more stable and simply a more elegant way. 
+
 ---
 ---
 
