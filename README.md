@@ -71,3 +71,15 @@ The process to record your own process from sap into a vba code is quite straigh
 Under Save To, provide the path and file name where you want to store the captured user interactions.
 
 ![saving-recording-file](https://user-images.githubusercontent.com/93589158/197609231-56c10887-9360-4953-8e4d-534c4268b031.png)
+
+
+---
+---
+
+## Contributors
+
+Dorian Gloinec
+
+Email: dorian.gloinec@protonmail.com
+
+LinkedIn: https://www.linkedin.com/in/dorian-gloinec/
