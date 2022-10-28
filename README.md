@@ -13,7 +13,7 @@ This project leverages microsoft excel, VBA scripting language and python 3.6 wi
 * [pywin32](https://pypi.org/project/pywin32/)
 * [pandas](https://pandas.pydata.org/)
 
-This automation proposition is only working for Windows OS, however they are many way to get similar or even better results on other OS
+This automation proposition is only working for Windows OS, however they are many ways to get similar or even better results on other OS
 
 ---
 
